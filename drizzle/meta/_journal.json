@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1726294063887,
+      "tag": "0000_shiny_ronan",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1726295224137,
+      "tag": "0001_new_chamber",
+      "breakpoints": true
+    }
+  ]
+}
