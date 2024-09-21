@@ -1,13 +1,15 @@
-"use client";
-import { InferResponseType } from "hono";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { client } from "@/lib/hono";
-import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button"
+import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown } from "lucide-react"
+import { Checkbox } from "@/components/ui/checkbox"
 
-export type ResponseType = InferResponseType<typeof client.api.accounts.$get, 200>['data'][0];
+import { InferResponseType } from "hono"
+import { client } from "@/lib/hono"
+import { Actions } from "./action"
+
+export type ResponseType = InferResponseType<typeof client.api.accounts.$get, 200>["data"][0]
 
 export const columns: ColumnDef<ResponseType>[] = [
   {
@@ -43,7 +45,11 @@ export const columns: ColumnDef<ResponseType>[] = [
           Name
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
-      );
+      )
     },
   },
-];
+  {
+    id: "actions",
+    cell: ({ row }) => <Actions id={row.original.id}/>
+  },
+]
