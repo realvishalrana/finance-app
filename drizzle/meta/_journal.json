@@ -15,6 +15,13 @@
       "when": 1726295224137,
       "tag": "0001_new_chamber",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1726984527363,
+      "tag": "0002_first_argent",
+      "breakpoints": true
     }
   ]
 }
